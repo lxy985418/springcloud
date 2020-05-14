@@ -1,0 +1,25 @@
+server:
+  port: 80
+spring:
+  application:
+    name: com.springcloud-consume-order
+
+
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务的时候使用ip地址
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/
+ribbon:
+#  建立连接的时间限制 两端建立连接
+  ReadTimeout: 5000
+#  从后台读取到可用资源的时间限制
+  ConnectTimeout: 5000
+
+logging:
+  level:
+   com.springcloud.service.PaymentFeignService: debug
+
