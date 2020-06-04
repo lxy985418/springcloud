@@ -1,0 +1,24 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri:  https://github.com/lxy985418/springcloud-config.git
+          search-paths:
+          - springcloud-config
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
+##rabbitmq相关配置，暴露bus刷新配置端点
+management:
+  endpoints:  #暴露bus刷新配置端点
+    web:
+      exposure:
+        include: 'bus-refresh'
+

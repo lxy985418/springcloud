@@ -13,10 +13,10 @@
 
     <dependencies>
         <!--&lt;!&ndash; 包含了sleuth zipkin 数据链路追踪&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.com.springcloud</groupId>-->
-            <!--<artifactId>spring-com.springcloud-starter-zipkin</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
         <dependency><!-- 引用自己定义的api通用包，可以使用Payment支付Entity -->
             <groupId>com.cloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
